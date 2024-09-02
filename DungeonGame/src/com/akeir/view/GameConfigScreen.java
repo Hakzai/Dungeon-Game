@@ -1,6 +1,7 @@
 package com.akeir.view;
 
-import com.akeir.base.SceneBase;
+import akeir.base.view.SceneBase;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -27,16 +28,31 @@ public class GameConfigScreen extends SceneBase {
     private Label lbPlayersQuantity;
     private ComboBox cbPlayersQuantity;
 
+    private Button btnStart;
+
     public GameConfigScreen()
     {
-        this.builder = new GameConfigScreenBuilder(this);
-        this.executeBuild();
-        this.setElementsAction();
+        builder = new GameConfigScreenBuilder(this);
+        executeBuild();
+        setDefaultValues();
+
+        setElementsAction();
     }
 
     @Override
-    protected void setElementsAction() {
+    protected void setElementsAction()
+    {
+//        btnStart.setOnAction((event) -> {
+//
+//        })
+    }
 
+    private void setDefaultValues()
+    {
+        this.txtNumberOfPlayers.setText("2");
+        this.txtNumberOfLevels.setText("10");
+        this.txtPlayerHandicap.setText("0");
+        this.cbDifficult.getSelectionModel().selectFirst();
     }
 
     public Label getLbGameAttributes()

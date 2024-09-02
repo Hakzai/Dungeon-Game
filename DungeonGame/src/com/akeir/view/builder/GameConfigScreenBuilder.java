@@ -1,6 +1,6 @@
 package com.akeir.view.builder;
 
-import com.akeir.base.BuilderBase;
+import akeir.base.view.builder.BuilderBase;
 import com.akeir.game.GameAttributes;
 import com.akeir.view.GameConfigScreen;
 import javafx.collections.FXCollections;
@@ -27,10 +27,6 @@ public class GameConfigScreenBuilder extends BuilderBase {
     public void doBuild()
     {
         super.doBuild();
-
-        this.scene.setPrefWidth(1280.0);
-        this.scene.setPrefHeight(720.0);
-        this.scene.setStyle("-fx-background-color: #282828;"); // Dark Gray color
 
         this.scene.getLbGameAttributes().setId("lbGameAttributes");
         this.scene.getLbGameAttributes().setText("Game Attributes");

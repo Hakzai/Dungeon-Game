@@ -3,22 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.akeir.rooms.example;
+package akeir.rooms.sample;
 
-import com.akeir.rooms.attributes.DeathRoomAttributes;
-import com.akeir.rooms.model.Room;
-import java.util.concurrent.ThreadLocalRandom;
+import akeir.rooms.model.Room;
 
 /**
  *
  * @author Codeiro
  */
-public class DeathRoom extends Room {
+public abstract class DeathRoom extends Room {
     
     public DeathRoom()
     {
-        ROOM_ID = ThreadLocalRandom.current().nextInt(1,16);
-        ATTRIBUTES = new DeathRoomAttributes();
+        super();
     }
     
     @Override

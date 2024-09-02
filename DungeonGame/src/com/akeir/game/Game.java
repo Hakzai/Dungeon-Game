@@ -11,6 +11,6 @@ package com.akeir.game;
  */
 public class Game {
     
-    static GameAttributes ATTRIBUTES;
-    static GameScenario SCENARIO;
+    private GameAttributes gameAttributes;
+    private GameScenario gameScenario;
 }
