@@ -6,10 +6,11 @@
 package dungeongame;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import com.akeir.view.GameConfigScreen;
 
 /**
  *
@@ -18,9 +19,9 @@ import javafx.stage.Stage;
 public class DungeonGame extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLMain.fxml"));
-        
+    public void start(Stage stage) {
+        Parent root = new GameConfigScreen();
+
         Scene scene = new Scene(root);
         
         stage.setScene(scene);

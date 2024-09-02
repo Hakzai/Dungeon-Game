@@ -5,7 +5,7 @@
  */
 package dungeongame;
 
-import test.character.Zaharis;
+import com.akeir.test.character.Zaharis;
 import com.akeir.characters.model.Character;
 import com.akeir.items.example.LifePotion;
 import com.akeir.items.model.Item;
@@ -18,7 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import test.monster.Apprentice;
+import com.akeir.test.monster.Apprentice;
 
 /**
  *
