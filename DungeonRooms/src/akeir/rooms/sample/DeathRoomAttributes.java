@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author Codeiro
  */
-public abstract class DeathRoomAttributes extends RoomAttributes {
+public class DeathRoomAttributes extends RoomAttributes {
     
     public DeathRoomAttributes()
     {
@@ -23,8 +23,5 @@ public abstract class DeathRoomAttributes extends RoomAttributes {
         hasTimer = false;
             
         exitCondition = "A PLAYER IS DEAD";
-        canExit = false;
     }
-    
-    public abstract void setCanExit();
 }

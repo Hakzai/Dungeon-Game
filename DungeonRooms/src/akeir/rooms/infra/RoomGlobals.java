@@ -11,7 +11,7 @@ package akeir.rooms.infra;
  */
 public final class RoomGlobals {
     
-    public static int ROOM_ID_SEQUENCE = 0;
+    private static int ROOM_ID_SEQUENCE = 0;
     
     public static int DEATH_ROOM_COUNT = 0;
     public static int TREASURE_ROOM_COUNT = 0;
@@ -32,4 +32,12 @@ public final class RoomGlobals {
     public static int DESTINY_ROOM_COUNT_MAX;
     
     private RoomGlobals() { }
+    
+    public synchronized static int defineRoomID()
+    {
+        int curValue = ROOM_ID_SEQUENCE;
+        ROOM_ID_SEQUENCE++;
+        
+        return curValue;
+    }
 }

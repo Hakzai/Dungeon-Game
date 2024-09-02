@@ -13,42 +13,68 @@ import java.util.Set;
  *
  * @author Codeiro
  */
-public abstract class Room {
+public abstract class Room implements RoomActions {
     
-    protected int roomID;
-    protected RoomAttributes roomAtrributes;
-    protected RoomConnection exitOne;
-    protected RoomConnection exitTwo;
-    protected RoomConnection exitThree;
+    protected final int roomID;
+    protected RoomAttributes roomAttributes;
+    protected boolean canExit;
     
-    protected Set<String> playersOnRoom = new HashSet<>();
-    protected Set<String> playerHistory = new HashSet<>();
+    protected final Set<String> playersOnRoom = new HashSet<>();
+    protected final Set<String> playerHistory = new HashSet<>();
     
-    public Room()
+    public Room(RoomAttributes roomAttrs)
     {
-        defineRoomIDandIncreaseGlobalSequence();
-        defineRoomConnections();
+        this.roomID = RoomGlobals.defineRoomID();
+        this.roomAttributes = roomAttrs;
+        this.canExit = roomAttrs.exitCondition.isEmpty();
     }
     
-    public void speak()
+    @Override
+    public void enter()
     {
         System.err.println("Entering Room");
     }
-        
-    public abstract void interact();
     
-    public abstract void lookTreasure();
-    
-    public abstract void exit();
-    
-    private void defineRoomIDandIncreaseGlobalSequence()
+    @Override
+    public void exit()
     {
-        roomID = RoomGlobals.ROOM_ID_SEQUENCE;
-        RoomGlobals.ROOM_ID_SEQUENCE++;
+        if(isCanExit())
+        {
+            System.err.println("Will leave the Room");
+        }
+        else
+        {
+            System.err.println("Cannot leave Room Now");
+        }
     }
     
-    private void defineRoomConnections()
+    public final int getRoomId()
     {
+        return this.roomID;
+    }
+    
+    public final RoomAttributes getRoomAttributes()
+    {
+        return this.roomAttributes;
+    }
+    
+    public final Set getPlayersOnRoom()
+    {
+        return playersOnRoom;
+    }
+    
+    public final Set getPlayerHistory()
+    {
+        return playersOnRoom;
+    }
+    
+    public final boolean isCanExit()
+    {
+        return canExit;
+    }
         
+    public final void setCanExit()
+    {
+        canExit = true;
     }
 }

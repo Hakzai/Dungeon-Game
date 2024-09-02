@@ -18,7 +18,6 @@ public abstract class RoomAttributes {
     protected boolean hasTreasure;
     protected boolean hasTimer;
     protected String exitCondition;
-    protected boolean canExit;
     
     public RoomAttributes(RoomType roomType, int roomLevel)
     {
@@ -49,10 +48,5 @@ public abstract class RoomAttributes {
     public String getExitCondition() 
     {
         return exitCondition;
-    }
-    
-    public boolean isCanExit()
-    {
-        return canExit;
     }
 }
