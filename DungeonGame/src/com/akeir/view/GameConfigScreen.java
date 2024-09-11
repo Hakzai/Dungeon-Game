@@ -1,11 +1,14 @@
 package com.akeir.view;
 
 import akeir.base.view.SceneBase;
+import akeir.scene.dark.control.ButtonDark;
+import com.akeir.view.controller.GameConfigScreenController;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import com.akeir.view.builder.GameConfigScreenBuilder;
+import javafx.stage.Stage;
 
 @SuppressWarnings("rawtypes")
 public class GameConfigScreen extends SceneBase {
@@ -42,9 +45,14 @@ public class GameConfigScreen extends SceneBase {
     @Override
     protected void setElementsAction()
     {
-//        btnStart.setOnAction((event) -> {
-//
-//        })
+        btnStart = new ButtonDark("Start");
+        btnStart.setLayoutX(10.0);
+        btnStart.setLayoutY(200.0);
+        this.getChildren().add(btnStart);
+
+        btnStart.setOnAction((event) -> {
+            GameConfigScreenController.openGameWindow((Stage) this.getScene().getWindow());
+        });
     }
 
     private void setDefaultValues()

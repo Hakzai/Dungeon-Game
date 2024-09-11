@@ -5,20 +5,20 @@
  */
 package dungeongame;
 
-import com.akeir.test.character.Zaharis;
+import akeir.test.character.Zaharis;
 import com.akeir.characters.model.Character;
 import com.akeir.items.example.LifePotion;
 import com.akeir.items.model.Item;
 import com.akeir.monsters.model.Monster;
-import com.akeir.rooms.example.DeathRoom;
-import com.akeir.rooms.model.Room;
+import akeir.rooms.sample.DeathRoom;
+import akeir.rooms.model.Room;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import com.akeir.test.monster.Apprentice;
+import akeir.test.monster.Apprentice;
 
 /**
  *

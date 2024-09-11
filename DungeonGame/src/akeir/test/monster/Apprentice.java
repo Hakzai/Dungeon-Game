@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.akeir.test.monster;
+package akeir.test.monster;
 
 import com.akeir.monsters.attributes.EvilWizardAttributes;
 import com.akeir.monsters.model.Monster;

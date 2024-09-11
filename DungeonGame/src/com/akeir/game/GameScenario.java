@@ -6,7 +6,7 @@
 package com.akeir.game;
 
 import akeir.infra.exception.GameNotInitializedException;
-import com.akeir.rooms.model.Room;
+import akeir.rooms.model.Room;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +16,11 @@ import java.util.List;
  */
 class GameScenario {
     
-    private final int levelsQuantity;
-    private final int roomsQuantity;
-    private final int playersQuantity;
-    private final int machinePlayersQuantity;
-    private final List<ArrayList> levelsList;
+    private int levelsQuantity;
+    private int roomsQuantity;
+    private int playersQuantity;
+    private int machinePlayersQuantity;
+    private List<ArrayList> levelsList;
     private List<Room> roomsList;
     private List<Player> playersList;
 
